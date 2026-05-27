@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h3>2. 자바스크립트 내장객체</h3>
+        
+        <h4>Array</h4>
+        <script>
+            // 배열 생성
+            const arr1 = [1,2,3,4,5];
+            const arr2 = new Array(6,7,8,9,10);
+
+            document.write('arr1 : ' + arr1 + '<br>');
+            document.write('arr2 : ' + arr2 + '<br>');
+
+            //배열 원소 출력
+            document.write('arr1 1번째 원소 : ' +arr1[0]+ '<br>');
+            document.write('arr1 2번째 원소 : ' +arr1[1]+ '<br>');
+            document.write('arr2 1번째 원소 : ' +arr2.at(0) + '<br>');
+            document.write('arr2 2번째 원소 : ' +arr2.at(1) + '<br>');
+
+            //배열 원소 추가
+            arr1.push(7);
+            arr1.push(8);
+            arr1.push(9);
+
+            document.write('arr1 : ' + arr1 + '<br>');
+
+            //배열 연결
+            const arr3 = arr1.concat(arr2);
+            document.write('arr3 : ' +arr3+ '<br>');
+
+            //배열 원소 문자열 연결
+            const result = arr1.join('-');
+            document.write('result : ' +result+ '<br>');
+
+            //배열 반복처리
+            arr1.forEach(function(item, index){
+
+                document.write('index : ' + index + ', item : '+ item + '<br>');
+            });
+
+            arr2.forEach((item,index)=>{
+                
+                document.write('index : ' + index + ', item : '+ item + '<br>');
+            });
+
+            //배열원소 스트림 처리
+            const arr4 = arr3.map((item)=>{
+
+                return item + 10;
+
+            });
+            document.write('arr4 : ' +arr4+ '<br>');
+
+            const arr5 = arr3.map(item => item * 2);
+            document.write('arr5 : ' +arr5+ '<br>');
+
+            const arr6 = arr3.filter(item => item % 2 == 0);
+            document.write('arr6 : ' +arr6+ '<br>');
+
+            const arr7 = arr1.sort((a,b)=> a-b);
+            const arr8 = arr2.sort((a,b)=> b-a);
+
+             document.write('arr7 : ' +arr7+ '<br>');
+             document.write('arr8 : ' +arr8+ '<br>');
+
+            const arr9 = arr1.map(itme => item * 2)
+            .filter(item => item > 10).sort((a,b) => b-a);
+
+        </script>
+        <h4>String</h4>
+        <script></script>
+        <h4>regExp</h4>
+        <script></script>
+        <h4>Math</h4>
+        <script></script>
+        <h4>Date</h4>
+        <script></script>
+        
+    </body>
+</html>
