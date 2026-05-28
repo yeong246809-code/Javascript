@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4>기본 이벤트 모델 방식</h4>
+        <button id="btn1">버튼1</button>
+        <button id="btn2">버튼2</button>
+        <button id="btn3">버튼3</button>
+        <script>
+            const btn1 = document.getElementById('btn1');
+            const btn2 = document.getElementById('btn2');
+            const btn3 = document.getElementById('btn3');
+
+            btn1.onclick = function(){
+                alert('버튼1');
+
+            };
+            btn2.onclick = function(){
+                alert('버튼2');
+
+            };
+
+        </script>
+    <h4>표준 이벤트 모델 방식</h4>
+        <button class="btn1">버튼1</button>
+        <button class="btn2">버튼2</button>
+        <button class="btn3">버튼3</button>
+        <script>
+            const bttn1 = document.getElementsByClassName('btn1')[0];
+            const bttn2 = document.getElementsByClassName('btn2')[0];
+            const bttn3 = document.getElementsByClassName('btn3')[0];
+
+             bttn1.addEventListener('click', function(){
+                alert('버튼1');
+
+            }); 
+            bttn2.addEventListener('dblclick', function(){
+                alert('버튼2');
+
+            }); 
+            bttn3.addEventListener('mousedown', function(){
+                alert('버튼3');
+
+            }); 
+
+
+        </script>
+</body>
+</html>
